@@ -5,7 +5,7 @@ const app = require ('./app.js')
 
 
 app.listen(PORT , () => {
-    console.log(`Server is listening at port ${PORT}`);
+    console.log(`Server is listening at port number ${PORT}`);
 })
 
 
