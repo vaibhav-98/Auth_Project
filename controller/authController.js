@@ -2,7 +2,7 @@ const userModel = require('../models/userSchema')
 const emailValidator = require('email-validator')
 const bcrypt = require('bcrypt')
 
-
+//********************** singUp API****************************************************** */
 const signup = async (req,res,next) => {
    const {name , email ,password, confirmPassword} = req.body;
    console.log({name , email ,password, confirmPassword});
@@ -57,7 +57,7 @@ const signup = async (req,res,next) => {
 }
 
 
-
+//****************************** SingIn API ************************************************ */
 const signin = async (req,res) => {
     const {email, password} = req.body ;
 
