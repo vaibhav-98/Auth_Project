@@ -125,6 +125,7 @@ const getUser = async(req,res,next) =>{
 
 
 
+//**************************** logOut API***************************************** */
 
 const logout =(req,res) => {
 
