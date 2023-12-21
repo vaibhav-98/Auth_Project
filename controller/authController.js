@@ -134,11 +134,40 @@ const logout = (req, res) => {
   }
 };
 
+const deleteUser = async(req,res) => {
+  try {
+    const userId = req.params.userId;
+      if (!userId) {
+        res.status(400).json({ 
+          success: false,
+          message: "user not found"
+      })
+      }
+      const DeletedUser = await userModel.findByIdAndDelete(userId)
+       if(!DeletedUser){
+         res.status(400).json({
+          success: false,
+          message:"user not deleted"
+         })
+       }
+       res.status(200).json({
+        success: true,
+        message: "user deleted sucessfully"
+       })
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: error.message,
+    });
+  }
+}
+
 module.exports = {
   signup,
   signin,
   getUser,
   logout,
+  deleteUser
 };
 
 
