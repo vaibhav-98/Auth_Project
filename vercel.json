@@ -1,13 +1,6 @@
 {
     "version": 2,
-    "builds": [ 
-    {
-        "src": "./index.js",
-        "use": "@vercel@node"
-    }
-],
-"router" : {
-    "src":"/(.*)",
-    "dest": "/"
-}
+    "name": "auth_project",
+    "builds": [ {"src": "./index.js", "use": "@vercel@node"}],
+    "router" :[  {"src":"/(.*)","dest": "/index.js"}]
 }
