@@ -10,4 +10,4 @@ const databaseConnect = () => {
 }
 
 
-module.exports = databaseConnect
+module.exports = databaseConnect             

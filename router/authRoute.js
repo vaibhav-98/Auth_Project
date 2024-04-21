@@ -6,9 +6,9 @@ const authRouter = express.Router();
 
 authRouter.post('/signup' , signup);
 authRouter.post('/signin' , signin);
-authRouter.get('/user', jwtAuth  , getUser)
-authRouter.get('/logout' , jwtAuth , logout)
-authRouter.delete('/deleteUser/:userId',jwtAuth, deleteUser)
+authRouter.get('/user', jwtAuth  , getUser)                     
+authRouter.get('/logout' , jwtAuth , logout)         
+authRouter.delete('/deleteUser/:userId',jwtAuth, deleteUser)      
 
 
 module.exports= authRouter;
